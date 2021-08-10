@@ -95,8 +95,8 @@ async function starts() {
 	FxBot.on('connecting', () => {
 	console.log(color('> [ INFO ]', 'white'), color('Conectando...'))
 	})
-	FxBot.on('open', () => {
-	console.log(color('> [ INFO ]', 'white'), color('Ya me conecte 👌🏻'))
+	FxBot.on('open', () => 
+	console.log(color('> [ INFO ]', 'white'), color('Ya me conecte �🏻'))
 	})
 		await FxBot.connect({timeoutMs: 30*1000})
   fs.writeFileSync('./session.json', JSON.stringify(FxBot.base64EncodedAuthInfo(), null, '\t'))
@@ -124,7 +124,7 @@ FxBot.on('group-participants-update', async (anu) => {
 				teks  = `┏━━━━━━━━━━━━━━━━━
 ┃          「 *𝗛𝗢𝗟𝗔* 」
 ┃@${num.split('@')[0]}👋
-┃BIENVENIDO AL GRUPO 
+┃BIENVENIDO AL GRUPO D¿
 ┃*${mdata.subject}*
 ┗━━━━━━━━━━━━━━━━━
 ┏━━━━━━━━━━━━━━━━━
@@ -187,7 +187,7 @@ ${promote}`
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
 			let buff = await getBuffer(ppimg)
-			teks = `𝙎𝙀 𝙈𝘼𝙏𝙊 𝘼 𝙐𝙉 𝘼𝙆𝙈𝙄𝙉
+			teks = `𝙎𝙀 𝙈𝘼𝙏𝙊 𝘼 𝙐𝙉 𝘼�DMI
 			
 \`\`\`Nombre :\`\`\` ${num.replace('@s.whatsapp.net', '')}
 
@@ -356,7 +356,7 @@ message: {
                 quoted: {
                     key: {
                         fromMe: false,
-                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid : `17792492278@g.us` } : {})
+                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid : `33622007411@g.us` } : {})
                     },
                     message: {
                         "imageMessage": {
@@ -413,7 +413,7 @@ participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: 'status@broadcast' } : 
 'mimetype': 'image/jpeg',
  'jpegThumbnail': fs.readFileSync('./stik/thumb.jpeg')
 },
-'title': `𝗙𝗫-𝗕𝗢𝗧`,
+'title  'LIGHT-𝗕𝗢𝗧`,
 'productImageCount': 0
 },
 'businessOwnerJid': `0@s.whatsapp.net`
@@ -1000,7 +1000,7 @@ case prefix+ 'leave':
 					}, 2000)
                      setTimeout( () => {
 					FxBot.updatePresence(from, Presence.composing) 
-					FxBot.sendMessage(from, 'Adios jotos👋', text) // ur cods
+					FxBot.sendMessage(from, 'Adios GORDO DOWN👋', text) // ur cods
 					}, 0)
                      break
        case prefix+ 'ownergrup':
@@ -1425,7 +1425,7 @@ break
             fakestatus(`*STATUS*\n${banChats ? '> SELF-MODE' : '> PUBLIC-MODE'}`)
             break
 	        case prefix+ 'self':
-        	if (!mek.key.fromMe) return fakestatus('「 ❗ 」ESTE COMANDO SOLO PUEDE SER USADO POR MI')
+        	if (!mek.key.fromMe) return fakestatus('「 ❗ 」ESTE COMANDO SOLO PUEDE SER USADO POR LIGHT')
         	if (banChats === true) return
        	uptime = process.uptime()
          	 // var taged = ben.message.extendedTextMessage.contextInfo.mentionedJid[0]
@@ -1502,7 +1502,7 @@ reply(mess.mpv)
 		            ytresult += '❏ Duración: ' + video.timestamp + '\n'
 		            ytresult += '❏ Subida: ' + video.ago + '\n________________________\n\n'
 		    		});
-		    		ytresult += '◩ *SELF-BOT*'
+		    		ytresult += '◩ *LIGHT-BOT*'
     		await fakethumb(tbuff,ytresult)
 			break
 case prefix+ 'play':
@@ -1518,8 +1518,8 @@ case prefix+ 'play':
                         const { dl_link, thumb, title, filesizeF, filesize } = res
                         axios.get(`https://tinyurl.com/api-create.php?url=${dl_link}`)
                         .then(async (a) => {
-                        if (Number(filesize) >= 100000) return sendMediaURL(from, thumb, `*DESCARGADOR DE MUSICA BY FELIXCRACK*\n\n*🤓Titulo*: ${title}\n*⏭️Extensión*: MP3\n*⚖️Tamaño*: ${filesizeF}\n*📎Link* : ${a.data}\n\n_ESPERE ENVIANDO ARCHIVO, NO SPAMES LA CONCHA DE TU MADRE_`)
-		                        const captions = `*DESCARGADOR DE MUSICA BY FELIXCRACK*\n\n*🤓Titulo*: ${title}\n*⏭️Extensión*: MP3\n*⚖️Tamaño*: ${filesizeF}\n*📎Link*: ${a.data}\n\n_ESPERE ENVIANDO ARCHIVO, NO SPAMES LA CONCHA DE TU MADRE_`
+                        if (Number(filesize) >= 100000) return sendMediaURL(from, thumb, `*DESCARGADOR DE MUSICA BY LIGHT*\n\n*🤓Titulo*: ${title}\n*⏭️Extensión*: MP3\n*⚖️Tamaño*: ${filesizeF}\n*📎Link* : ${a.data}\n\n_ESPERE ENVIANDO ARCHIVO, NO SPAMES LA CONCHA DE TU MADRE_`)
+		                        const captions = `*DESCARGADOR DE MUSICA BY LIGHT*\n\n*🤓Titulo*: ${title}\n*⏭️Extensión*: MP3\n*⚖️Tamaño*: ${filesizeF}\n*📎Link*: ${a.data}\n\n_ESPERE ENVIANDO ARCHIVO, NO SPAMES LA CONCHA DE TU MADRE_`
                         sendMediaURL(from, thumb, captions)
                         await sendMediaURL(from, dl_link).catch(() => reply('error'))
                         })                
